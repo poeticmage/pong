@@ -1,0 +1,170 @@
+.App {
+  text-align: center;
+}
+
+body{
+  background: url("./jap\ resie.gif") no-repeat center fixed;
+  background-size: cover;
+}
+.bg{
+  position: fixed;
+  background-color: rgba(7, 7, 161,0.2);
+  box-shadow: inset 0px 0px 10vh rgba(0, 0, 9, 0.5);
+  width: 100vw; 
+  height: 100vh; 
+    /* box-shadow: inset 0px 0px 30vh rgba(240, 102, 3, 0.5); */
+}
+@media (min-width: 2000px), (min-height: 1100px) {
+  body {
+    background-size: 100% 100%;
+  }}
+  .gameover{
+    animation: gameoverred 0.7s ease-out forwards;
+    box-shadow: inset 0px 0px 30vh rgba(240, 102, 3, 0.5);
+  }
+  @keyframes gameoverred {
+    0% { box-shadow: inset 0px 0px 30vh rgba(240, 102, 3, 0.5); }
+  100% { box-shadow: inset 0px 0px 10vh rgba(0, 0, 9, 0.5); }
+  }
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+header{
+    position: fixed;
+    width:100vw;
+    height:10vh;
+      /* background-color: rgb(97, 218, 251,0.4); */
+
+}
+footer{
+  position: absolute;
+  width:100vw;
+  height: 13vh;
+  bottom: 0;
+  /* background-color: rgb(97, 218, 251,0.4); */
+  z-index: 1000;
+}
+.head{
+  position: fixed;
+  top:40vh;
+  left:40vw;
+  color: rgba(105, 97, 251,0.9);
+  font-family: 'Share Tech Mono' , sans-serif;
+  text-align: center;
+  width: 25vw;
+  height:25vh;
+  background-color: rgba(0, 0, 0,0.5);
+  display: "flex";
+  flex-direction: "column";
+}
+@media (max-width: 768px) { /* Targeting mobile devices */
+  .head {
+    top:40vh;
+    left:20vw;
+    width: 300px;
+    height: 200px;
+  }
+}
+
+.button{
+  position: fixed;
+  top:50vh;
+  left:45vw;
+  color: rgba(105, 97, 251,0.9);
+  font-family: 'Share Tech Mono' , sans-serif;
+  text-align: center;
+  width: 120px;
+  height: 50px;
+  border-radius: 15px;
+  background-color: rgba(0, 0, 0,0.5);
+  animation: txt 1.0s infinite alternate ease-in-out;
+}
+@keyframes txt {
+  0% { box-shadow: 0px 0px 5px 5px rgba(105, 97, 251, 0.9); }
+  50% { box-shadow: 0px 0px 15px 5px  rgba(105, 97, 251, 0.5); } 
+  100% { box-shadow: 0px 0px 5px 0px rgba(105, 97, 251, 0.5); }
+}
+@media (max-width: 768px) { /* Targeting mobile devices */
+  .button {
+    top:50vh;
+    left:35vw;
+   
+  }
+}
+
+.paddle{
+  position:absolute;
+  /* left: 50%; */
+  /* transform: translateX(-50%); */
+  bottom: 10vh;
+  width: 15vw;
+  height: 3vh;
+  background-color: rgb(238, 237, 244);
+  box-shadow: inset 0px 0px 15px rgb(38, 5, 92);
+  border-radius: 5px;
+  z-index: 1000;
+}
+
+
+.ballSize{
+  width:36px;
+  height:36px;
+  border-radius: 50%;
+  z-index: 1000;
+
+}
+.ball{
+  box-shadow: 0px 0px 10px 5px white;
+  position: absolute;
+  left: 50%; 
+  transform: translateX(-50%); 
+  animation: fire 1.5s infinite alternate ease-in-out;
+}
+@keyframes fire {
+  0% { box-shadow: 0px 0px 10px 0px white; }
+  50% { box-shadow: 0px 0px 20px 5px white; } 
+  100% { box-shadow: 0px 0px 10px 0px white; }
+}
+
+.score{
+  position: fixed;
+  top:40vh;
+  left:37vw;
+  color: rgba(51, 49, 92, 0.5);
+  font-family: 'Share Tech Mono' , sans-serif;
+  text-align: center;
+  width: 25vw;
+  height:25vh;
+}
