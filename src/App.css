@@ -89,7 +89,7 @@ footer{
   display: "flex";
   flex-direction: "column";
 }
-@media (max-width: 768px) { /* Targeting mobile devices */
+@media (max-width: 768px) { /* mobile devices */
   .head {
     top:40vh;
     left:20vw;
@@ -145,6 +145,12 @@ footer{
   z-index: 1000;
 
 }
+@media (max-width: 768px) { /*  mobile smart ph */
+  .ballSize {
+    width: 12px;
+    height: 12px;
+  }
+}
 .ball{
   box-shadow: 0px 0px 10px 5px white;
   position: absolute;
@@ -157,6 +163,8 @@ footer{
   50% { box-shadow: 0px 0px 20px 5px white; } 
   100% { box-shadow: 0px 0px 10px 0px white; }
 }
+
+
 
 .score{
   position: fixed;
